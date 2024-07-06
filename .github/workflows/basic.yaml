@@ -8,6 +8,7 @@ on:
 
   workflow_dispatch:
 jobs:
+  #이 잡은 레포로부터 코드를 체크아웃한다.
   build:
       runs-on: ubuntu-latest
       steps:
