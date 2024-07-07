@@ -1,6 +1,7 @@
 name: Deployments example
 
 on:
+#push
   push:
     branches: ["main"]
 
