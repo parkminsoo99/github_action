@@ -1,14 +1,8 @@
-name: CI
+name: file tree
 
 on:
-  push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
-
   workflow_dispatch:
 jobs:
-  #이 잡은 레포로부터 코드를 체크아웃한다.......!!!
   build:
     runs-on: self-hosted
     steps:
