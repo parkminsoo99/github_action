@@ -1,4 +1,4 @@
-name : CI
+name: CI
 
 on:
   push:
@@ -8,16 +8,14 @@ on:
 
   workflow_dispatch:
 jobs:
-  #이 잡은 레포로부터 코드를 체크아웃한다.....
+  #이 잡은 레포로부터 코드를 체크아웃한다.......!!!
   build:
-      runs-on: self-hosted
-      steps:
-        - uses: Actions/checkout@v3
-        - name: Run a one-line script
-          run: echo hello, world!
-        - name: Run a multi-line script
-          run : | 
-            echo Add other Actions to build
-            echo test, and deploy your project
-
-        
+    runs-on: self-hosted
+    steps:
+      - uses: Actions/checkout@v3
+      - name: Run a one-line script
+        run: echo hello, world!
+      - name: Run a multi-line script
+        run: |
+          echo Add other Actions to build
+          echo test, and deploy your project
