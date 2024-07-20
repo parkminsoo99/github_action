@@ -1,0 +1,20 @@
+name : repo info with context
+
+on:
+  push:
+    branches: [$default-branch]
+  pull_request:
+    branches: [$default-branch]
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Show repo info
+        env:
+          GITHUB_CONTEXT: ${{toJson(github)}}
+        run: |
+          echo Repository is ${{github.repository}}
+          echo "$GITHUB_CONTEXT"
